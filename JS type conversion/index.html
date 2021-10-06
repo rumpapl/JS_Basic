@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Type Conversion</title>
+</head>
+<body>
+    <h1>Type Conversion</h1>
+
+    <script>
+        let var1 = 'string';
+        let var2 = '6';
+        let var3 = + var1;
+        let var4 = + var2;
+        let var5 = true;
+        let var6 = +var5;
+
+
+
+        console.log(`type of var1: ${typeof(var1)} && var2: ${typeof(var2)}`);
+        console.log(`type of var3: ${typeof(var3)} && var4: ${typeof(var4)}`);
+        console.log(var3);
+        console.log(var4);
+        console.log(var5);
+        console.log(var6);
+
+
+        let x = 5.88888;
+        console.log(x.toFixed(2));
+        console.log(x.toFixed(4));
+        console.log(x.toFixed(7));
+
+        console.log(x.toPrecision(2));
+        console.log(x.toPrecision(5));
+        console.log(x.toPrecision(3));
+    </script>
+</body>
+</html>

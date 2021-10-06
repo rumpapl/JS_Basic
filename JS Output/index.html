@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Output</title>
+</head>
+<body>
+    <h1>My First Web Page</h1>
+    <p>My First Paragraph</p>
+
+    <p id='demo'></p>
+    <script>
+        document.getElementById("demo").innerHTML="hello  Using innerHTML ";
+    </script>
+ 
+ <script>
+     document.write('write data using document.write()');
+ </script>
+ <br/>
+<button type="button" onclick="onClickTextChenge()">click here</button>
+<script>
+    function onClickTextChenge() {
+        alert('You cliked the button! ');
+        console.log('You cliked the button! ');
+        document.write(`<br/> Using document.write() after an HTML document is loaded, will delete all existing HTML:<br/>  The document.write() method should only be used for testing.`);
+    }
+</script>
+<button onclick="window.print()">Print this page</button>
+</body>
+</html>

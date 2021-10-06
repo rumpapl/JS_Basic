@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Errors</title>
+</head>
+
+<body>
+    <h1>Errors:</h1>
+
+    <span>Show errors below if occors: &nbsp; <span id="show-errors"></span></span>
+
+    <p>Please input a number between 5 and 10:</p>
+    <input type="text" id='input'/>
+    <button onclick="t_fun()">Test Input</button>
+    <br />
+    <span>Show custom Error: <span id="custom-err"></span></span>
+
+
+    <script>
+
+        // error handling
+        try {
+            alertt('hello');
+        }
+        catch (err) {
+            console.log(err);
+            document.getElementById('show-errors').innerHTML = err.name + ':  ' + err.message;
+        }
+
+
+
+        // custom error handling
+        function t_fun() {
+            console.log("in console");
+            document.getElementById("custom-err").innerHTML = "";
+            let inputNumber = document.getElementById('input').value;
+            try {
+                if (inputNumber == '') {
+                    throw 'Empty!';
+                }
+
+                if (isNaN(inputNumber)) {
+                    throw 'Not a Number!';
+                }
+
+                let num = Number(inputNumber);
+
+                if (num > 10) {
+                    throw "Too high!";
+                }
+
+                if (num < 0) {
+                    throw "Too low!";
+                }
+
+            }
+            catch (err) {
+                console.log(err);
+                document.getElementById('custom-err').innerHTML = err;
+            }
+
+            finally{
+                document.getElementById('input').value = '';
+            }
+        }
+
+    </script>
+</body>
+
+</html>

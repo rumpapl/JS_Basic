@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Scope</title>
+</head>
+<body>
+    <h1>Scope</h1>
+
+    <script>
+
+        let x = 5; // x can be access every where because it decleared in global scope. 
+        console.log(`x: ${x}`);
+
+        var b = 6; // variable decleared with var can be access every where. CZ it act like gobal variable.
+        console.log(`b: ${b}`);
+
+
+        {
+            let a = 10;
+            var c ='c'; // c can be access every where.
+            console.log(`a: ${a}`);
+            console.log(`insite block x: ${x}`);
+            console.log(`insite block b: ${x}`);
+            console.log(`insite block c: ${c}`);
+        }
+
+        function test(){
+            let z = 6;
+            console.log(`z: ${z}`);
+            console.log(`insite function block x: ${x}`);
+            console.log(`insite function block b: ${b}`);
+            console.log(`insite function block c: ${c}`); // c can be access every where.
+
+            // console.log(`a: ${a}`);  con`t access here
+        }
+
+        test();
+
+        console.log(`windo b: ${window.b}`); // In HTML, the global scope is the window object.
+        console.log(`windo c: ${window.c}`); // In HTML, the global scope is the window object.
+        console.log(`windo x: ${window.x}`); // Global variables defined with the let keyword do not belong to the window object.
+        console.log(`x: ${x}`);
+        console.log(`c: ${c}`); // c can be access every where.
+        // console.log(`a: ${a}`); con`t access here
+        // console.log(`z: ${z}`); con`t access here
+
+    </script>
+</body>
+</html>

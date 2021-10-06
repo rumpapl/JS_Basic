@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-This</title>
+</head>
+
+<body>
+    <h1> JS - This</h1>
+
+    <!-- 
+    /*
+    this in Event Handlers
+    */
+   // In HTML event handlers, this refers to the HTML element that received the event.
+     -->
+    <button onclick="this.style.display='none'">
+        Hide Me
+    </button>
+
+    <script>
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // this in a Method
+        console.log(person.fullName());
+
+        const person2 = {
+            firstName: "Joseph",
+            lastName: "Voe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+
+        // this in a Method
+        console.log(`person.fullName(): ${person.fullName()}`);
+        console.log(`person2.fullName(): ${person2.fullName()}`);
+
+
+        /* 
+        When used alone, the owner is the Global object, 
+        so this refers to the Global object.
+        */
+        let x = this;
+        console.log(x);
+
+
+        //  In strict mode, when used alone, this also refers to the Global object.
+        "use strict";
+        let y = this;
+        console.log(y);
+
+        // this in a Function (Default)
+        // in a function, this refers to the Global object [object Window].
+        function fun() {
+            return this;
+        }
+        console.log(fun());
+
+        // But when used in a function, in strict mode, this is undefined.
+        function fun_strict() {
+            "use strict";
+            return this;
+        }
+        console.log(fun_strict());
+
+        /*
+        Object Method Binding
+        */
+        // n these examples, this is the person object (The person object is the "owner" of the function):
+        const person3 = {
+            firstName: "phillips",
+            lastName: "Pie",
+            id: 5566,
+            myFunction: function () {
+                return this;
+            }
+        };
+        console.log(person3.myFunction());
+
+        /*
+        Explicit Function Binding
+        */
+        const userMethods = {
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        const userVars = {
+            firstName: "demo",
+            lastName: "user",
+        }
+
+        console.log(userMethods.fullName.call(userVars));
+    </script>
+</body>
+
+</html>
