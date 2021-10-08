@@ -45,4 +45,19 @@ console.log(salam.eyeColor);
 salam.eat();
 salam.sleep();
 
+// console.log('Protopyte');
 
+// const testObj ={
+//     name: 'karim',
+//     age: 23
+// }
+
+// console.log(testObj);
+
+// testObj.prototype={
+//     call(){
+//         console.log("phone ring");
+//     }
+// }
+// console.dir(testObj);
+// testObj.prototype.call();
