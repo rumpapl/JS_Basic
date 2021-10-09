@@ -73,7 +73,7 @@ cat3.showAge();
 // like below,
 console.log(Cat.greed());
 
-// If you want to use the myCar object inside the static method
+// If you want to use the cat3 object inside the static method
 // you can send it as a parameter:
 // ex:
 let msg = Cat.hello(cat3);
