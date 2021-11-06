@@ -14,3 +14,31 @@ body{
 .fname:required{
     border-color: blue;
 }
+
+.mover{
+    height: 50px;
+    width: auto;
+    background-color: crimson;
+    color: white;
+}
+
+.mout{
+    height: 50px;
+    width: auto;
+    background-color: green;
+    color: white;
+}
+
+.mdown{
+    height: 50px;
+    width: auto;
+    background-color: blue;
+    color: white;
+}
+
+.mup{
+    height: 50px;
+    width: auto;
+    background-color: yellow;
+    color: black;
+}

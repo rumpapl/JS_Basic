@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>dom-events</title>
+</head>
+
+<body>
+    <h1 id='h1' onclick="textClicked()">hello</h1>
+    <h2 id='h2' onclick="textClickedh2('h2')">hello 2</h2>
+    <h3 id='h3'>assign events using html dom</h3>
+
+    <div class="mout" onclick="showMsg()" onmouseover="mover(this)" onmouseout="mout(this)">
+        On Mouse Out
+    </div>
+
+    <div class="mup" onclick="showMsg()" onmousedown="mdown(this)" onmouseup="mup(this)">
+       On Mouse Up
+    </div>
+    <script>
+        function textClicked() {
+            document.getElementById('h1').innerHTML = 'you clicked!';
+        }
+        function textClickedh2(id) {
+            document.getElementById('h2').innerHTML = `you clicked ${id}! `;
+        }
+
+        document.getElementById('h3').onclick=displayText;
+        function displayText() {
+            document.getElementById('h3').innerHTML='it works!';
+            
+        }
+
+        function mover(ele) {
+            ele.innerHTML='On mouse Over'; 
+            ele.className='mover';
+        }
+        function mout(ele) {
+            ele.innerHTML='On Mouse Out'; 
+            ele.className='mout';
+        }
+
+        function mdown(ele) {
+            ele.innerHTML='On mouse Down'; 
+            ele.className='mdown';
+        }
+        function mup(ele) {
+            ele.innerHTML='On Mouse up'; 
+            ele.className='mup';
+        }
+        function showMsg() {
+            alert('You clicked!');
+        }
+    </script>
+</body>
+
+</html>
