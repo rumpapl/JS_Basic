@@ -1,0 +1,16 @@
+body{
+    background-color: antiquewhite;
+}
+
+.fields{
+    border: 1px solid;
+    border-color: green;
+}
+.empty-fields{
+    border: 1px solid;
+    border-color: red;
+}
+
+.fname:required{
+    border-color: blue;
+}
