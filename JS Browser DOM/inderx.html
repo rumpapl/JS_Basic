@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,43 @@
     <title>Document</title>
     <script src='./script.js'></script>
 </head>
+
 <body>
     <h2>JavaScript</h2>
-<p>Line-breaks in a popup box.</p>
+    <p>Line-breaks in a popup box.</p>
+    <button onclick="popup()">Try it</button>
+    <br>
+    <br>
+    <span>Time-Out Example</span>
+    <br>
+    <button onclick="startTime()">Start</button>
+    <button onclick="stopAlert()">Stop</button>
 
-<button onclick="popup()">Try it</button>
-<br>
-<span>Time-Out Example</span>
-<br>
-<button onclick="startTime()">Start</button>
-<button onclick="stopAlert()">Stop</button>
+    <br>
+    <br>
+    <span>Time-Interval Example</span>
+    <br>
+    <button onclick="startTimeInterval()">Start</button>
+    <button onclick="stopTimeInterval()">Stop</button>
 
-<br>
-<span>Time-Interval Example</span>
-<br>
-<button onclick="startTimeInterval()">Start</button>
-<button onclick="stopTimeInterval()">Stop</button>
+    <br>
+    <br>
+    <span>Count-Down Application(-Using setTimeout)</span>
+    <br>
+    <input type="text" id="countText" value='10' />
+    <button onclick="startCountTimer('countText')">Count Start</button>
+    <button onclick="stopCountTimer()">Count Stop</button>
 
+    <br>
+    <br>
+    <span>Count-Down Application(-Using setInterval)</span>
+    <br>
+    <form action="#">
+        <input type="text" id="countTxt" required placeholder="Enter the Count value" />
+
+        <button type="submit" onclick="startCounter('countTxt')">Count Start</button>
+        <button type="submit" onclick="stopCounter()">Count Stop</button>
+    </form>
 </body>
+
 </html>
